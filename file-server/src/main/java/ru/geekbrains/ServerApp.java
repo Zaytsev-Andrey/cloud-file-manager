@@ -1,7 +1,7 @@
 package ru.geekbrains;
 
 /**
- * Starts server application
+ * Runs server application
  */
 public class ServerApp {
     public static void main(String[] args) {
