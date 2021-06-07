@@ -1,0 +1,32 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<VBox fx:controller="ru.geekbrains.TableController" xmlns:fx="http://javafx.com/fxml">
+
+    <HBox>
+        <ComboBox fx:id="diskBox" onAction="#diskBoxAction" focusTraversable="false" />
+        <TextField fx:id="currentPath" focusTraversable="false" HBox.hgrow="ALWAYS" editable="false" />
+        <Button fx:id="buttonUp" onAction="#btnUpAction" focusTraversable="false"/>
+    </HBox>
+
+    <TableView fx:id="fileTable" VBox.vgrow="ALWAYS" />
+
+    <HBox>
+        <TextField fx:id="searchField" onAction="#btnSearchAction" promptText="Search..." focusTraversable="false" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+
+    <properties>
+        <ctrl><fx:reference source="controller" /></ctrl>
+    </properties>
+</VBox>

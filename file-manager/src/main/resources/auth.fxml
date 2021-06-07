@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<VBox fx:controller="ru.geekbrains.AuthController" xmlns:fx="http://javafx.com/fxml"
+    alignment="CENTER" spacing="20">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <Label fx:id="authStatusLabel" text="Enter login and password" />
+
+    <TextField fx:id="loginField" onAction="#btnLoginAction" promptText="Login..." />
+    <TextField fx:id="passwordField" onAction="#btnLoginAction" promptText="Password..." />
+
+    <HBox spacing="10">
+        <Button onAction="#btnLoginAction" text="Login" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Button onAction="#btnCancelAction" text="Cancel" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>
